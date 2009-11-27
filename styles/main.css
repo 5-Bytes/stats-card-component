@@ -1,0 +1,156 @@
+:root{
+	--veryDarkBlue : hsl(233, 47%, 7%); 			/*(main background)*/
+	--darkDesaturatedBlue: hsl(244, 38%, 16%);		/*(card background)*/
+	--softViolet: hsl(277, 64%, 61%); 				/*(accent)*/
+	--whiteMainHeading: hsl(0, 0%, 100%); 			/*(main heading,stats)*/
+	--TransparentWhiteMainP: hsla(0, 0%, 100%, 0.75); /*(main paragraph)*/
+	--TransparentWhiteStat: hsla(0, 0%, 100%, 0.6);	/*(stat headings)*/
+}
+
+*,
+*:before,
+*after {
+	font-size: 15px;
+	box-sizing: border-box;
+	margin:0;
+	font-family: sans-serif;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	flex-direction: column;
+	background-color:var(--veryDarkBlue);
+}
+
+.container{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20vh;
+	background-color: var(--darkDesaturatedBlue);
+	border:1px solid Transparent;
+	border-radius: 0.4em;
+	width: 82vw;
+	max-width:944.625px;
+	height: 90%;
+	max-height:372px;
+}
+
+.partOfLeft{
+	margin: 1.5em 3em;
+}
+
+.header{
+	margin-bottom: 1.5em;
+	color: var(--whiteMainHeading);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.firstP{
+	font-size:2.2em;
+	margin-bottom: 0;
+	padding-right:1.6em;
+}
+
+.firstP span{
+	color:var(--softViolet);	
+}
+
+.secondP{
+	font-family:lucida;
+	font-size:0.9em;
+	color:var(--TransparentWhiteStat);
+	padding-right:8em;
+}
+
+.boxStats {
+	display: flex;
+	align-items:center;
+	width: 100%;
+}
+
+.boxStats strong{
+	color:var(--whiteMainHeading);
+	margin-bottom: 0;
+}
+
+.boxStats p{
+	color:var(--TransparentWhiteStat);
+	margin-top: 0;
+	font-size:0.7em;
+	letter-spacing:1px;
+}
+
+.boxStats span{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+.partOfRight{
+	background-color: var(--softViolet);
+	border-radius: 0 0.4em 0.4em 0;
+}
+
+.womanImg {
+	display: block;
+	width: 28em;
+	height: 100%;
+	border-radius:0 0.4em 0.4em 0;
+	mix-blend-mode: multiply;
+	opacity: 0.8;
+}
+
+.attribution {
+	padding-top: 4em;
+	font-size: 13px; 
+	text-align: center;
+	color:var(--whiteMainHeading);
+}
+
+.attribution a {
+ color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 350px) and (max-width: 1000px){
+	
+	.container{
+		flex-direction: column-reverse;
+		height: auto;
+		max-width:290px;
+		max-height:672px;
+		margin-top:15vh;
+	}
+
+	.firstP{
+		font-size: 1.5em;
+		text-align:center;
+		padding:0;
+	}
+
+	 .secondP{
+		text-align:center;
+		font-size:0.8em;
+		padding:0;
+	}
+
+	.boxStats{
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.partOfRight{
+		border-radius: 0.4em 0.4em 0 0;
+	}
+
+	.womanImg{
+		max-width:290px;
+		max-height: 240px;
+		border-radius:0.4em 0.4em 0 0;
+	}
+}
