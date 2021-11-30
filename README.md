@@ -1,4 +1,4 @@
-#Stats-Card-Component
+# Stats-Card-Component
 
-##Installation
+## Installation
 Open index.html
